@@ -18,8 +18,11 @@ intro/processed.tex: intro/sample.tex
 
 # Chapter Two
 
-## deps += ...
-## cleans += ...
+deps += catalog/catalog.tex catalog/f1a.pdf catalog/f1b.pdf \
+  catalog/f2.pdf catalog/f3.pdf catalog/f4.pdf catalog/f5.pdf \
+  catalog/f6.pdf catalog/f7.pdf catalog/f8.pdf catalog/f9.pdf
+cleans += catalog/catalog.aux
+
 ## etc
 
 
@@ -28,7 +31,7 @@ intro/processed.tex: intro/sample.tex
 # rewritten by pdfLaTeX.
 
 deps += myucthesis.cls uct12.clo aasmacros.sty mydeluxetable.sty \
-  setup.tex thesis.bib yahapj.bst
+  setup.tex thesis.bib yahapj.bst mymacros.sty
 cleans += thesis.aux thesis.bbl thesis.blg thesis.lof thesis.log \
   thesis.lot thesis.out thesis.toc mthesis.pdf setup.aux
 toplevels += mthesis.pdf
