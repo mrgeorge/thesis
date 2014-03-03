@@ -16,12 +16,28 @@ intro/processed.tex: intro/sample.tex
 	sed -e s/terrible/wonderful/ $< >$@
 
 
-# Chapter Two
+# Chapter 2
 
 deps += catalog/catalog.tex catalog/f1a.pdf catalog/f1b.pdf \
   catalog/f2.pdf catalog/f3.pdf catalog/f4.pdf catalog/f5.pdf \
   catalog/f6.pdf catalog/f7.pdf catalog/f8.pdf catalog/f9.pdf
 cleans += catalog/catalog.aux
+
+# Chapter 3
+
+deps += centering/centering.tex centering/fig1.pdf centering/fig2.pdf \
+  centering/fig3.pdf centering/fig4.pdf centering/fig5.pdf \
+  centering/fig6.pdf centering/fig7.pdf centering/fig8.pdf
+cleans += centering/centering.aux
+
+# Chapter 4
+
+deps += transformers/transformers.tex transformers/fig1.pdf \
+  transformers/fig2.pdf transformers/fig3.pdf \
+  transformers/fig4.pdf transformers/fig5.pdf \
+  transformers/fig6.pdf transformers/fig7a.pdf \
+  transformers/fig7b.pdf
+cleans += transformers/transformers.aux
 
 ## etc
 
@@ -31,7 +47,7 @@ cleans += catalog/catalog.aux
 # rewritten by pdfLaTeX.
 
 deps += myucthesis.cls uct12.clo aasmacros.sty mydeluxetable.sty \
-  setup.tex thesis.bib yahapj.bst mymacros.sty
+  setup.tex thesis.bib yahapj.bst
 cleans += thesis.aux thesis.bbl thesis.blg thesis.lof thesis.log \
   thesis.lot thesis.out thesis.toc mthesis.pdf setup.aux
 toplevels += mthesis.pdf

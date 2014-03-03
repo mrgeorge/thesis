@@ -18,6 +18,7 @@
 \newcommand{\zG}{\mbox{$z_{\rm G}$}}
 \newcommand{\pz}{\mbox{$\mathcal{P}(z)$}}
 \newcommand{\flux}{erg cm$^{-2}$ s$^{-1}$ }
+\newcommand{\nuvr}{{$(\rm{NUV} - r^+)$ }}
 
 \chapter{Galaxies in X-ray Groups I: 
 Robust Membership Assignment and 
@@ -174,7 +175,7 @@ often employ matched filters \citep[e.g.,][]{Postman1996} and tesselations
 \citep[e.g.,][]{Marinoni2002, Gerke2005} to isolate groups from the
 background field, and red sequence methods have proven efficient at
 identifying groups over large volumes \citep[e.g.,][]{Gladders2005,
-  Koester2007}. These catalogs 
+  Koester2007b}. These catalogs 
 typically assign the brightest member galaxy as the center of
 each group, and use the richness determined by the number of members
 as a proxy for the total mass. X-ray detections can reduce the
@@ -233,19 +234,19 @@ mass content of these X-ray groups; we expand upon their work with a
 thorough characterization of a new member selection algorithm and
 develop a group member catalog for a variety of applications.
 
-The data used in making our group catalog are described in \S~\ref{s:data}. 
-In \S~\ref{s:sample}, we present the sample selection and sensitivity
+The data used in making our group catalog are described in \S~\ref{cat_s:data}. 
+In \S~\ref{cat_s:sample}, we present the sample selection and sensitivity
 limits, along with tests of the quality of the
 photometric redshifts constructed from the imaging data. 
 Our selection algorithm for the member catalog is described in
-\S~\ref{s:membership}, where we associate member galaxies with groups based
+\S~\ref{cat_s:membership}, where we associate member galaxies with groups based
 on their proximity to the X-ray center and their photometric redshifts.
-In \S~\ref{s:tests}, we characterize the reliability of our selection
+In \S~\ref{cat_s:tests}, we characterize the reliability of our selection
 with mock catalogs from simulations and by comparing our photometric
 redshift selection to the subsample of sources with spectroscopic redshifts.
 We make the catalog of group membership assignments and galaxy
-properties publicly available, describing the format and release in \S~\ref{s:catalog}. We
-discuss in \S~\ref{s:discussion} some of our initial findings from the
+properties publicly available, describing the format and release in \S~\ref{cat_s:catalog}. We
+discuss in \S~\ref{cat_s:discussion} some of our initial findings from the
 catalog, including the influence of the group environment on galaxy colors
 out to $z\sim 1$. We find evidence of suppressed star formation in
 galaxies in group environments over the entire redshift range studied, and
@@ -280,7 +281,7 @@ $c_{200\rm{c}}$ is the concentration parameter.
 %----------------------------------------------------------
 
 \section{COSMOS Data}
-\label{s:data}
+\label{cat_s:data}
 
 The COSMOS field has been observed in a broad range of wavelengths,
 with imaging data from X-ray to radio and a large spectroscopic
@@ -300,11 +301,11 @@ optical, and infrared ranges have enabled the determination
 of precise photometric redshifts \citep{Capak2007b,Ilbert2009}, with
 typical redshift uncertainty $\sigma_{\mathcal{P}}\lesssim0.01$ for galaxies
 with F814W~$<22.5$, and $\sigma_{\mathcal{P}}=0.03$ for F814W=24, at
-$z<1.2$ (see \S\S~\ref{s:photoz} and \ref{s:photoz_tests} for details
+$z<1.2$ (see \S\S~\ref{cat_s:photoz} and \ref{cat_s:photoz_tests} for details
 and tests of the photometric redshifts used in this paper).
 
 \subsection{X-ray Catalog}
-\label{s:xray}
+\label{cat_s:xray}
 
 The entire COSMOS region has been mapped through 54 overlapping {\sl
   XMM-Newton} pointings and additional {\sl Chandra} observations
@@ -371,7 +372,7 @@ presented with the updated X-ray catalog in a separate paper
 (Finoguenov et al., in prep.).
 
 \subsection{Spectroscopic Data}
-\label{s:spectroscopy}
+\label{cat_s:spectroscopy}
 
 The COSMOS field has been targeted by a number of spectroscopic
 campaigns. We use spectra from the zCOSMOS
@@ -379,7 +380,7 @@ campaigns. We use spectra from the zCOSMOS
 magnitude limit of $i^{+}=22.5$, along with other spectroscopic data
 sets from Keck, MMT, SDSS, and VLT \citep{Prescott2006, Capak2010}. We
 include in this paper a new sample from our 
-recent program with FORS2/VLT (see \S~\ref{s:fors2}). Each redshift has
+recent program with FORS2/VLT (see \S~\ref{cat_s:fors2}). Each redshift has
 an associated confidence flag; we use only those of class 3 or 4 meaning that the
 redshift is secure or very secure. In repeat observations, zCOSMOS
 targets with these confidence classes have a verification rate of
@@ -406,7 +407,7 @@ $20\%$ of group members have spectroscopic redshifts in addition to
 the photometric redshifts used for member selection. 
 
 \subsubsection{FORS2 Spectra}
-\label{s:fors2}
+\label{cat_s:fors2}
 We have recently obtained additional spectra of galaxies in the COSMOS
 field with the FORS2 spectrograph at the VLT. Targets were selected
 for a number of scientific goals including velocity dispersion
@@ -466,7 +467,7 @@ smaller than photometric redshift errors it should not impact our results.
 
 
 \subsection{Photometric Redshifts}
-\label{s:photoz}
+\label{cat_s:photoz}
 
 Despite the extensive spectroscopic data available, coverage of group
 members is incomplete. We instead use photometric redshifts (hereafter
@@ -482,7 +483,7 @@ likelihood that a galaxy lives at a redshift $z$ given the photometric
 data and the spectral templates used. Rather than collapsing this
 function to a single value at the mean, median, or peak and assuming
 Gaussian uncertainty as is often done, we make use of the full PDF to
-determine group membership, described in \S~\ref{s:membership}. 
+determine group membership, described in \S~\ref{cat_s:membership}. 
 In this paper we use an updated version (pdzBay\_v1.7\_010809) of the
 photo-$z$ catalog presented in \citet{Ilbert2009} with additional deep
 $H$ band data and small improvements in the template fitting
@@ -501,7 +502,7 @@ between the photometric and spectroscopic redshifts is well-fit by a
 Gaussian with a standard deviation equal to the NMAD. Applying this
 estimator to galaxies considered for group membership, i.e., those
 with F814W~$<24.2$, $z_{p}<1.2$, and an available stellar mass estimate (see
-\S~\ref{s:stellarmass}), there are over 12000 spectroscopic redshifts
+\S~\ref{cat_s:stellarmass}), there are over 12000 spectroscopic redshifts
 and the overall agreement with photo-$z$s is $\sigma_{\Delta z/(1+\zs)} =
 0.008$. However, the spectroscopic sample is dominated by the
 zCOSMOS survey, which has a magnitude limit of
@@ -514,7 +515,7 @@ directly from the width of the PDF. \citet{Ilbert2009} have shown
 that the shape of \pz\ is broadly consistent with the distribution of
 offsets between photometric and spectroscopic redshifts. For example,
 $65\%$ of objects have a redshift offset within the $68\%$ uncertainty
-on the PDF, $\sigma_{\mathcal{P}}$. In \S~\ref{s:photoz_tests}, we
+on the PDF, $\sigma_{\mathcal{P}}$. In \S~\ref{cat_s:photoz_tests}, we
 discuss further tests on the agreement between these two estimates of
 redshift uncertainty, $\sigma_{\mathcal{P}}$ and $\sigma_{\Delta z}$ (we
 henceforth drop the conventional factor of $1+\zs$ to make direct
@@ -523,10 +524,10 @@ photo-$z$ quality that could bias our selection against different
 galaxy populations.
 
 \subsection{Stellar Mass Estimates}
-\label{s:stellarmass}
+\label{cat_s:stellarmass}
 
 Stellar masses are used in the identification of group centers (see
-\S~\ref{s:centers}) and are estimated using the Bayesian code
+\S~\ref{cat_s:centers}) and are estimated using the Bayesian code
 described in \citet{Bundy2006a}, with good agreement to the
 masses determined by \citet{Drory2009}. For each galaxy, the SED and
 photo-$z$ described above are referenced to a grid of stellar population
@@ -553,7 +554,7 @@ is complete to a typical depth of $K_{\rm s}=24$ \citep{McCracken2010}.
 %----------------------------------------------------------
 
 \section{Sample Limits and Quality of Photometric Redshifts}
-\label{s:sample}
+\label{cat_s:sample}
 
 \subsection{Mass Limits and Quality Flags}
 
@@ -564,7 +565,7 @@ we also discuss tests of the accuracy and precision of
 photo-$z$s for different galaxy populations to show that our group member
 sample is not biased by variations in the quality of photo-$z$s.
 
-As mentioned in \S~\ref{s:xray}, we consider X-ray detected groups at
+As mentioned in \S~\ref{cat_s:xray}, we consider X-ray detected groups at
 redshifts $0<\zG<1$. Identifying optical associations with X-ray
 groups becomes more challenging at $\zG>1$ and typically requires
 dedicated spectroscopic followup, so we omit high redshift candidates
@@ -576,7 +577,7 @@ uncertainty, we record three additional flags for each group:
     $R_{\rm{s}}$ of the X-ray center is masked in optical images or
     falls outside the edges of the ACS field}
 \item{\textsc{poor}: 3 or fewer member galaxies are associated with the group
-    (using $P_{\rm mem}>0.5$, see \S~\ref{s:membership})}
+    (using $P_{\rm mem}>0.5$, see \S~\ref{cat_s:membership})}
 \item{\textsc{merger}: the projected radius (\rvir) drawn from the X-ray center of one
     group overlaps with that of another by more than $25\%$ and the
     group redshifts are consistent ($|\Delta z|<0.01$).}
@@ -592,7 +593,7 @@ assigned the \textsc{mask}, \textsc{poor}, and \textsc{merger} flags,
 respectively. Our rationale for assigning these flags is to attain a
 group catalog that is as pure as possible, though not necessarily complete.
 
-The left panel of Figure~\ref{fig:mass_limits} shows the halo masses
+The left panel of Figure~\ref{cat_fig:mass_limits} shows the halo masses
 and redshifts for the group sample. Green squares represent the
 cleanest sample of $129$ groups with \textsc{xflag} $=1$ or 2, and
 none of the other flags set, black points relax the restrictions on
@@ -614,7 +615,7 @@ in other optical filters \citep{Capak2007b}, the $K_{\rm s}$-band
 detection requirement causes detections in the ACS imaging to
 become incomplete near F814W=24.2, which is also in the magnitude
 range where photo-$z$ quality deteriorates rapidly (see
-\S~\ref{s:photoz_tests}). The F814W filter magnitude correlates more
+\S~\ref{cat_s:photoz_tests}). The F814W filter magnitude correlates more
 strongly with photo-$z$ precision than longer wavelength filters (the
 $4000$\AA\ break enters the filter range at $z\sim 0.75$ and remains
 in that range beyond our redshift limit), so we use it to apply the
@@ -627,7 +628,7 @@ Because of photo-$z$ uncertainties, we allow galaxies to have a
 higher redshift limit than the groups in which they reside, giving the
 $\zp<1.2$ cut.
 
-The right panel of Figure~\ref{fig:mass_limits} shows the stellar
+The right panel of Figure~\ref{cat_fig:mass_limits} shows the stellar
 masses and photometric redshifts for galaxies meeting the selection criteria. We
 plot only every third galaxy for clarity. The red curve shows the
 $85\%$ stellar mass completeness limit calculated for the oldest
@@ -660,15 +661,15 @@ statistical samples.
   denote the mass sensitivity corresponding with the X-ray flux limit
   (left) and the stellar mass limits for a passive galaxy
   (right). Blue boxes show the mass and redshift bins used for analysis in
-  \S~\ref{s:discussion}, with dashed boxes denoting stellar mass bins with
+  \S~\ref{cat_s:discussion}, with dashed boxes denoting stellar mass bins with
   significant incompleteness. Only every third galaxy is plotted for visual clarity.}
-\label{fig:mass_limits}
+\label{cat_fig:mass_limits}
 \end{figure}
 % **** FIG 1 *****
 % **** SIDE BY SIDE FIGURE *****
 
 \subsection{Tests of Photometric Redshifts}
-\label{s:photoz_tests}
+\label{cat_s:photoz_tests}
 
 We have described how the increase in photo-$z$ errors at faint magnitudes
 partially motivates our selection cut on galaxies brighter than
@@ -714,7 +715,7 @@ These classes were found to correlate with visually classified
 morphologies as expected. For these tests, we use
 morphologies determined using the Zurich Estimator of Structural Types
 \citep[ZEST; ][]{Scarlata2007} on the ACS images. The results are compiled in
-Table~\ref{t:photoz_tests}, in which we present the size and average
+Table~\ref{cat_t:photoz_tests}, in which we present the size and average
 magnitude of each population, along with the two measures of photo-$z$
 uncertainty and the fraction of sources for which the photo-$z$ deviates
 significantly from the spectroscopic redshift.
@@ -795,8 +796,8 @@ accuracy.
   foreground stars, satellite trails, or image defects. MMGG$_{\rm
     scale}$ are the most massive group galaxies within 
   an NFW scale radius of the X-ray center (see
-  \S~\ref{s:centers}). AGN have been identified in {\sl
-    Chandra} X-ray data \citep{Elvis2009}.\label{t:photoz_tests}}
+  \S~\ref{cat_s:centers}). AGN have been identified in {\sl
+    Chandra} X-ray data \citep{Elvis2009}.\label{cat_t:photoz_tests}}
 \end{deluxetable}
 
 % **** FIG 2 *****
@@ -816,7 +817,7 @@ sample, as well as the divisions between color types. Ordinate axes on margin
 plots should be multiplied by $10^4$ (left side) and $10^5$ (bottom)
 for normalization. We do not see strong variations in photo-$z$ precision
 with redshift or color, but there is a significant magnitude-dependence.}
-\label{fig:zerr}
+\label{cat_fig:zerr}
 \end{figure}
 % **** FIG 2 *****
 
@@ -827,14 +828,14 @@ space for fainter sources. There is also some degradation at higher redshift,
 but since our sample is not as heavily weighted toward high redshifts
 as it is toward faint magnitudes, we do not currently account for the
 redshift dependence of photo-$z$ accuracy when selecting group members.
-We note that Table~\ref{t:photoz_tests} shows mean magnitudes and
+We note that Table~\ref{cat_t:photoz_tests} shows mean magnitudes and
 photo-$z$ errors for objects that also have spectroscopic redshifts;
 these errors are representative of the PDF uncertainties for the full
 galaxy sample in the bright bins, but in the faint bins the
 spectroscopic sample is brighter than the full population and
 photo-$z$ errors are smaller than average.
 
-Figure~\ref{fig:zerr} illustrates how the photo-$z$ PDF uncertainty varies with
+Figure~\ref{cat_fig:zerr} illustrates how the photo-$z$ PDF uncertainty varies with
 magnitude, redshift, and color for the full galaxy sample. The parameter space is divided into
 bins of $\Delta\zp=0.01$, $\Delta \rm{F814W}=0.1$, and $\Delta C=0.1$. For
 bins containing at least 10 galaxies, the half-width of the median
@@ -854,13 +855,13 @@ the smaller variations due to color and redshift.
 %--------------------------------------------------------
 
 \section{Group Membership Selection}
-\label{s:membership}
+\label{cat_s:membership}
 \subsection{Overview}
 
 This is not a paper about \textit{finding} galaxy groups; instead our aim is to
 associate galaxies with groups that have already been identified as
 extended X-ray sources. Our basic strategy is to take the locations of
-groups from the X-ray catalog described in \S~\ref{s:xray} and
+groups from the X-ray catalog described in \S~\ref{cat_s:xray} and
 \citet[][and in prep.]{Finoguenov2007} and assign galaxies
 to groups based on their positions and redshifts. Previous work on
 finding group and cluster members has often included assumptions about
@@ -878,7 +879,7 @@ versus \mvir\ relation for the group sample as determined by weak
 lensing \citep{Leauthaud2010}. The depth of the cylinder
 in redshift space is allowed to vary for each candidate member galaxy
 according to the typical photo-$z$ uncertainty for its apparent
-magnitude (see Fig.~\ref{fig:zerr}).
+magnitude (see Fig.~\ref{cat_fig:zerr}).
 
 Photometric redshift uncertainties are larger than the typical intrinsic span
 of a galaxy group in redshift space. A typical photo-$z$ error of
@@ -914,7 +915,7 @@ group along with the typical photo-$z$ uncertainty for the magnitude of
 the galaxy, and an estimate of the number density of field galaxies
 relative to group members. Additionally, stellar masses are used to
 select a central galaxy from the membership list, refining the somewhat
-uncertain X-ray positions (see \S~\ref{s:centers}).
+uncertain X-ray positions (see \S~\ref{cat_s:centers}).
 
 
 \subsection{Algorithm}
@@ -929,14 +930,14 @@ fractions of galaxies in groups and the field. The approach presented
 here was designed with COSMOS data in mind, but may be applicable to
 other multi-wavelength group and cluster studies, such as optical
 imaging surveys in fields with SZ or X-ray data. In
-\S~\ref{s:tests}, we consider the quality of our resulting member
+\S~\ref{cat_s:tests}, we consider the quality of our resulting member
 catalog and how it could be modified by these different data sets. We
 attempt to keep the discussion here general while inserting details
 specific to the COSMOS data when necessary. To find the center of a group, we
 start with the X-ray centroid and then refine this position using
 the most massive member galaxy near the X-ray position, and finally we
 update the member list around the new central galaxy (more details on centering are
-presented in \S~\ref{s:centers} and Paper II.)
+presented in \S~\ref{cat_s:centers} and Paper II.)
 
 We first consider the field galaxies that can contaminate our selection.
 The background density of galaxies varies with position, redshift, and
@@ -947,10 +948,10 @@ the volume within $3\rvir{}$ and $z_{\rm{G}}\pm 5\sigma_{\mathcal{P}}(\bar{m})$
 around all groups in the catalog regardless of flags,
 where $\bar{m}$ is the mean magnitude of galaxies in the bin. The
 final results are not strongly sensitive to the choice of volume removed around
-groups. Figure~\ref{fig:fielddensity} shows this field density
+groups. Figure~\ref{cat_fig:fielddensity} shows this field density
 $n_F(\rm{F814W},z)=dN_F/dz/d\Omega$, which is similar to the quantity
-shown in the bottom left panel of Figure~\ref{fig:zerr} but split
-into magnitude bins. Figure~\ref{fig:fielddensity} also shows the
+shown in the bottom left panel of Figure~\ref{cat_fig:zerr} but split
+into magnitude bins. Figure~\ref{cat_fig:fielddensity} also shows the
 field density as computed by summing the redshift probability
 distribution functions of galaxies for comparison to the approach of
 directly counting galaxies in photo-$z$ bins. Despite different sampling
@@ -970,7 +971,7 @@ uncertainty swamps the constraint on locally correlated structure. We
 thus opt to use the entire area to estimate the mean density of
 background galaxies as a function of magnitude and redshift. We
 discuss further the choice of this method of estimating the field density
-in \S~\ref{s:error}.
+in \S~\ref{cat_s:error}.
 
 % **** FIG 3 *****
 \begin{figure}
@@ -985,7 +986,7 @@ in \S~\ref{s:error}.
   quadrants is not large, so we use the mean density across the whole
   field, shown by the green curve in each of panel and repeated in the
   bottom right panel for each magnitude bin.}
-\label{fig:fielddensity}
+\label{cat_fig:fielddensity}
 \end{figure}
 % **** FIG 3 *****
 
@@ -995,7 +996,7 @@ than \rvir\ and a redshift within $3\sigma_{\mathcal{P}}(m_{\rm max})$ of the
 group redshift \zG, where $m_{\rm max}$ is the limiting magnitude
 F814W=24.2 and $\sigma_{\mathcal{P}}=0.035$. The number of member
 candidates can be compared with the field density in
-Figure~\ref{fig:fielddensity} to estimate the fraction of galaxies
+Figure~\ref{cat_fig:fielddensity} to estimate the fraction of galaxies
 that are group members.
 
 For each candidate, we compare the photo-$z$ PDF to the expected
@@ -1009,7 +1010,7 @@ use the full distribution \pz\ for each galaxy to account for
 secondary peaks or other unusual features in the redshift PDF. The
 probability that a galaxy belongs to a group given \pz\ can be written as 
 \begin{equation}
-\label{eq:bayes}
+\label{cat_eq:bayes}
 P(g \in G|\pz) = \frac{P(\pz|g \in G) P(g \in G)}{P(\pz)}.
 \end{equation}
 The term $P(\pz|g \in G)$ is the likelihood of measuring the particular
@@ -1021,7 +1022,7 @@ P(\pz) &=& P(\pz|g \in G) P(g \in G) + \nonumber \\
           &  & P(\pz|g \in F) P(g \in F)
 \end{eqnarray}
 is the probability of measuring \pz\ for any galaxy in the group or
-field. Each factor in Equation~\ref{eq:bayes} has an implicit
+field. Each factor in Equation~\ref{cat_eq:bayes} has an implicit
 dependence on magnitude which we omit here and in following equations for notational
 simplicity, but we do account for magnitude-dependent variations in
 \pz\ and in the field and group densities.
@@ -1064,7 +1065,7 @@ PDFs.
 To estimate the prior, $P(g \in G)$, we begin by counting the number
 of galaxies in the range $\zG \pm 3\sigma_{\mathcal{P}}(m)$, measuring
 $N_{tot}=N_{G}+N_{F}$. The measurement of the field density shown in
-Figure~\ref{fig:fielddensity} provides an independent estimate of
+Figure~\ref{cat_fig:fielddensity} provides an independent estimate of
 $n_{F}$, which allows us to calculate an expected number of field
 galaxies in the cylinder, $\hat{N}_F=\int{n_F dz d\Omega}$. For each
 galaxy we linearly interpolate the curve in the relevant magnitude bin
@@ -1074,11 +1075,11 @@ $\hat{N}_F$. This value is subtracted from the measured $N_{\rm tot}$ to
 determine the expected number of group galaxies in the cylinder,
 $\hat{N}_{G}$. We use the estimated values, $\hat{N}_{F}$ and
 $\hat{N}_{G}$, to determine $P(g \in G)$ and $P(g \in F)$, and
-Equation~\ref{eq:bayes} assigns each galaxy a membership probability
+Equation~\ref{cat_eq:bayes} assigns each galaxy a membership probability
 between zero and one. In cases where a group is not well-detected in a given
 magnitude bin $(N_{\rm tot}<\hat{N}_{F}$, \ie{} $\hat{N}_{G}<0)$, galaxies
 in the bin are flagged and excluded from membership
-analysis. Tests in \S~\ref{s:tests} show that excluding these galaxies
+analysis. Tests in \S~\ref{cat_s:tests} show that excluding these galaxies
 does not cause significant incompleteness in the member selection.
 
 It is possible for the search cylinders of different groups to
@@ -1096,7 +1097,7 @@ probability assignment will aid in the study of merging groups.
 
 
 \subsection{Group Centers}
-\label{s:centers}
+\label{cat_s:centers}
 
 The robust identification of central galaxies is a challenging task,
 and relevant for a range of applications from satellite kinematics to
@@ -1146,7 +1147,7 @@ The selection of group centers used here is different than in
 \citet{Leauthaud2010}, which employed a weighting based on stellar 
 mass and distance to the X-ray position. Of the groups that have a
 confident central galaxy assignment from \citet{Leauthaud2010} and also
-satisfy the quality cuts for clean groups in \S~\ref{s:sample},
+satisfy the quality cuts for clean groups in \S~\ref{cat_s:sample},
 $80\%$ are assigned the same central galaxy by the two methods, $9\%$
 of the centrals identified by \citet{Leauthaud2010} are too distant
 from the X-ray center for our method to select, and $4\%$ are not
@@ -1162,7 +1163,7 @@ mass and $55~\rm{kpc}$ in distance to the X-ray centroid.
 %--------------------------------------------------------
 
 \section{Purity and Completeness}
-\label{s:tests}
+\label{cat_s:tests}
 
 Any selection of group members will have some fraction of false
 positives, interlopers selected as members that do not belong to a
@@ -1183,19 +1184,19 @@ selected. Interlopers are objects which are selected but are not true
 members and missed galaxies are objects which are not selected but are
 true members. Formally, 
 \begin{eqnarray}
-\label{eq:purity} 
+\label{cat_eq:purity} 
 \mathsf{p} &=& \frac{N_{\rm selected}-N_{\rm interlopers}}{N_{\rm selected}} \\
 \mathsf{c} &=& \frac{N_{\rm true}-N_{\rm missed}}{N_{\rm true}}.
-\label{eq:completeness}
+\label{cat_eq:completeness}
 \end{eqnarray}
 We can use the values of $\mathsf{p}$ and $\mathsf{c}$ to estimate
 $N_{\rm true}$ using $N_{\rm true}=N_{\rm selected}+N_{\rm
   missed}-N_{\rm interlopers}$ which can be rearranged into 
 \begin{equation}
 \frac{N_{\rm true}}{N_{\rm selected}}=\mathsf{\frac{p}{c}}
-\label{eq:correction}
+\label{cat_eq:correction}
 \end{equation}
-using Equations~\ref{eq:purity} and~\ref{eq:completeness}. This
+using Equations~\ref{cat_eq:purity} and~\ref{cat_eq:completeness}. This
 correction factor, $\mathsf{p}/\mathsf{c}$, can be used to remove bias in the estimate
 of the intrinsic number of group members, $N_{\rm true}$, if we understand the purity and
 completeness of the selection algorithm.
@@ -1215,7 +1216,7 @@ spectroscopic selection of group members can have contamination and
 incompleteness \citep[e.g.,][]{Gerke2005}.
 
 We perform further diagnostic tests using mock catalogs from N-body
-simulations described in \S~\ref{s:mocks}. Mock galaxies are prescribed to occupy halos according to
+simulations described in \S~\ref{cat_s:mocks}. Mock galaxies are prescribed to occupy halos according to
 a halo occupation distribution (HOD) model constrained by measurements
 of clustering, lensing, and stellar mass functions in COSMOS
 \citep{Leauthaud2011a, Leauthaud2011b}. After running 
@@ -1253,7 +1254,7 @@ galaxies and dark matter is unity.
 
 As we vary the membership probability threshold for photo-$z$ selection,
 we can see a tradeoff between purity and completeness shown in
-Figure~\ref{fig:memstat_threshold} with black points from the
+Figure~\ref{cat_fig:memstat_threshold} with black points from the
 spectroscopic test. Error bars show the standard deviation of 1000
 bootstrap samples of the spectroscopic catalog. Restricting the member
 list to sources with membership probability $P_{\rm mem} > 0.9$ gives a purity and
@@ -1266,13 +1267,13 @@ $92\%$.
 
 To further study the quality of the membership selection, we can
 measure trends in purity and completeness against other properties,
-seen in Figure~\ref{fig:memstat_all}. In this figure, we show how the
+seen in Figure~\ref{cat_fig:memstat_all}. In this figure, we show how the
 selection performs for galaxies of different redshift, magnitude,
 stellar mass, group-centric distance, and group halo mass, by
 measuring the purity and completeness of objects assigned $P_{\rm
-  mem}>0.5$. Figure~\ref{fig:memstat_color} shows
+  mem}>0.5$. Figure~\ref{cat_fig:memstat_color} shows
 the same tests for color and morphology. The results are discussed in more detail in 
-\S~\ref{s:error}, but we can see that the selection quality does not
+\S~\ref{cat_s:error}, but we can see that the selection quality does not
 vary significantly with redshift or group mass, but does degrade in
 the outskirts of groups and for faint, low-mass galaxies, which also
 tend to have blue colors and late type morphologies. We have tested the
@@ -1291,7 +1292,7 @@ larger uncertainties due to the smaller sample size.
   (black crosses) and mock catalogs (blue circles, mean of ten lightcones). Error bars
   are the standard deviation from 1000 bootstrap samples of the spectroscopic catalog. The cyan
   shaded band is the region spanned by the ten mock lightcones.} 
-\label{fig:memstat_threshold}
+\label{cat_fig:memstat_threshold}
 \end{figure}
 % **** FIG 4 *****
 
@@ -1308,7 +1309,7 @@ larger uncertainties due to the smaller sample size.
   ten mock lightcones, while the solid black curve represents the mock
   mean. Bins were chosen to measure a roughly constant number of galaxies for each 
   property tested while still representing the range of observed properties.}
-\label{fig:memstat_all}
+\label{cat_fig:memstat_all}
 \end{figure}
 % **** FIG 5 *****
 
@@ -1324,12 +1325,12 @@ larger uncertainties due to the smaller sample size.
   (type=1) and bulge-dominated disks (type=2.0), the late type
   category includes the remaining type=2 sources, and irregulars
   have type=3.} 
-\label{fig:memstat_color}
+\label{cat_fig:memstat_color}
 \end{figure}
 % **** FIG 6 *****
 
 \subsection{Mock Catalogs}
-\label{s:mocks}
+\label{cat_s:mocks}
 
 We use numerical simulations to construct a series of mock catalogs for a
 COSMOS-like survey to test the reliability of our member
@@ -1343,7 +1344,7 @@ This simulation can robustly resolve halos with masses above
 $\sim10^{11} h^{-1}~{\rm M_{\odot}}$ which corresponds to central
 galaxy stellar masses of $\sim10^{8.5}~h^{-1}~{\rm M_{\odot}}$, well-matched
 to our completeness limit of F814W=24.2 at $z=0.2$ (see
-Figure~\ref{fig:mass_limits}).
+Figure~\ref{cat_fig:mass_limits}).
 
 We extract ten light cones from the Consuelo simulation that have the
 same area as COSMOS and individually non-overlapping volumes. Halos
@@ -1380,7 +1381,7 @@ spectroscopic redshift with width equal to the photo-$z$ uncertainty for
 that magnitude. A Gaussian \pz\ is then centered at \zp\ with the same
 width, and sampled at the same redshift interval as the PDF for real
 galaxies. We do not include catastrophic photo-$z$ errors which are
-shown in Table~\ref{t:photoz_tests} to be a small fraction of the sample. 
+shown in Table~\ref{cat_t:photoz_tests} to be a small fraction of the sample. 
 
 The HOD model of \citet{Leauthaud2011a} assigns stellar
 masses to mock galaxies but does not assign magnitudes or colors. In
@@ -1406,27 +1407,27 @@ group center is offset from the central galaxy with a Gaussian scatter of $32
 \arcsec$ for \textsc{xflag}~=~2 halos which is reduced by the measured flux
 significance for \textsc{xflag}~=~1 halos, and we assume a typical
 $5\sigma$ flux measurement. The impact of centroiding errors is investigated in
-\S~\ref{s:surveys}.
+\S~\ref{cat_s:surveys}.
 
 Next we run the membership algorithm described in
-\S~\ref{s:membership} on the mock galaxy and halo
+\S~\ref{cat_s:membership} on the mock galaxy and halo
 catalogs, associating galaxies with halos. We can perform the same
 purity and completeness tests as with the spectroscopic sample above,
 but this time we know the halo membership \textit{a priori}. The
 results from these mock catalog tests are presented alongside those
-for the spectroscopic subsample as colored bands in Figures~\ref{fig:memstat_threshold}
-and~\ref{fig:memstat_all}.
+for the spectroscopic subsample as colored bands in Figures~\ref{cat_fig:memstat_threshold}
+and~\ref{cat_fig:memstat_all}.
 
 \subsection{Sources of Error}
-\label{s:error}
+\label{cat_s:error}
 
 Results from the tests on spectroscopic data and mock catalogs above
 can differ because the spectroscopic sample is weighted toward bright
 objects and because our knowledge of true membership in the
 spectroscopic data is limited by redshift-space distortions, while
 membership in the mock catalogs is known by design. 
-The general agreement seen in Figures~\ref{fig:memstat_threshold} and
-\ref{fig:memstat_all} between these tests of membership quality is
+The general agreement seen in Figures~\ref{cat_fig:memstat_threshold} and
+\ref{cat_fig:memstat_all} between these tests of membership quality is
 encouraging, and it suggests that the biases are modest and that the mock
 catalogs accurately represent the properties of real galaxies that we
 wish to study. The normalization of the purity and completeness curves for the
@@ -1440,21 +1441,21 @@ the converse holds for a smaller velocity range, shifting the curves
 up or down. Though the \textit{absolute} measure of purity and
 completeness in the spectroscopic tests holds some degree of
 arbitrariness, the \textit{relative} trends shown in
-Figure~\ref{fig:memstat_all} are in general agreement with the mocks,
+Figure~\ref{cat_fig:memstat_all} are in general agreement with the mocks,
 with some offsets likely due to sampling bias and redshift-space
 distortions. We study the effects of redshift-space distortions on
 member selection in the limit of a completely spectroscopic survey in
-\S~\ref{s:surveys}.
+\S~\ref{cat_s:surveys}.
 
 Information from the spectroscopic tests has the advantage that it
 can probe member selection effects due to properties that cannot easily be
 modeled (e.g., galaxy color and morphology), and these tests directly
 measure the effects of 
 photo-$z$ errors on our selection of galaxies in the same set of
-groups. We see in Figure~\ref{fig:memstat_color} that the trends of
+groups. We see in Figure~\ref{cat_fig:memstat_color} that the trends of
 selection quality with color and morphology parallel the trends with
-magnitude and stellar mass from Figure~\ref{fig:memstat_all}. 
-We have shown in \S~\ref{s:photoz_tests} that photo-$z$ quality is
+magnitude and stellar mass from Figure~\ref{cat_fig:memstat_all}. 
+We have shown in \S~\ref{cat_s:photoz_tests} that photo-$z$ quality is
 not strongly affected by color or morphology, and no other inputs
 to our selection algorithm explicitly depend on these properties. We infer
 that the lower completeness and purity seen for faint, low mass, blue, and
@@ -1485,7 +1486,7 @@ group centers will be discussed in more detail in Paper II.
 
 For the full sample of mock galaxies with $P_{\rm mem}>0.5$, we find a
 mean purity of $67\%$ and completeness of $92\%$. Looking at
-Figure~\ref{fig:memstat_all}, it is clear that the dominant source of
+Figure~\ref{cat_fig:memstat_all}, it is clear that the dominant source of
 impurity comes from galaxies in projection near the outskirts of
 groups. We can attribute this contamination to the fact that the
 density of true members falls steeply as a function of distance from
@@ -1493,7 +1494,7 @@ group centers while our membership algorithm selects galaxies
 uniformly out to \rvir. Faint galaxies are another source of impurity since their
 photo-$z$ errors are larger than average. Galaxies with lower masses and
 bluer colors are more common in the field than in dense environments
-(see \S~\ref{s:discussion}), so a higher contamination fraction from
+(see \S~\ref{cat_s:discussion}), so a higher contamination fraction from
 these populations is to be expected. There is also a slight dependence on halo 
 mass, since the density contrast between the field and groups is
 smaller for low mass halos, lowering the assigned membership
@@ -1508,7 +1509,7 @@ The covariance between these galaxy properties makes it challenging to
 isolate their influence on the contamination fraction. For example,
 the correlation between the stellar mass and brightness of a
 galaxy means that the corresponding panels of
-Figure~\ref{fig:memstat_all} are related and not independent probes of
+Figure~\ref{cat_fig:memstat_all} are related and not independent probes of
 contamination sources. The simplest
 way to increase the purity of the group sample is to consider only
 galaxies at smaller distances from the group center than the cut of
@@ -1518,7 +1519,7 @@ in a mean purity and completeness of $84\%$ and $92\%$, respectively.
 An alternative way to address the contamination and incompleteness of
 the selection would be to apply correction factors to the member
 selection as a function of these properties, as in
-Equation~\ref{eq:correction}. This would amount to introducing strong 
+Equation~\ref{cat_eq:correction}. This would amount to introducing strong 
 priors to the membership algorithm based on our HOD model, limiting
 the independence of the sample. In testing this approach however, we
 have noticed that the correction factor as a function of group-centric
@@ -1587,7 +1588,7 @@ selection algorithm is not strongly sensitive to the approach used for
 background estimation.
 
 \subsection{Applicability to Other Surveys}
-\label{s:surveys}
+\label{cat_s:surveys}
 
 In view of other surveys which will search for groups and clusters in
 multi-wavelength data, and to better characterize the advantages or
@@ -1605,7 +1606,7 @@ with $\sigma_z=0.05$, a deeper X-ray survey with more precise
 centroids of  $3\arcsec$, and a lower resolution X-ray or SZ survey with centroid
 uncertainties of $1\arcmin$. In the first three mock surveys we vary
 only the redshift uncertainty and apply the same centering uncertainty
-as the fiducial COSMOS mocks described in \S~\ref{s:mocks} assuming
+as the fiducial COSMOS mocks described in \S~\ref{cat_s:mocks} assuming
 similar X-ray detections. In the
 final two mock surveys we use the magnitude-dependent redshift
 uncertainties of the COSMOS mocks and assign centroiding
@@ -1615,10 +1616,10 @@ by a random value drawn from a Gaussian of width $\sigma_{\rm X}$. In all
 cases we keep the same group and galaxy detection limits as in the
 COSMOS data.
 
-Figures~\ref{fig:memstat_surveys_zerr} and
-\ref{fig:memstat_surveys_centroid} show the purity and completeness 
+Figures~\ref{cat_fig:memstat_surveys_zerr} and
+\ref{cat_fig:memstat_surveys_centroid} show the purity and completeness 
 obtained when applying our member selection algorithm to these mock
-surveys, in a manner similar to Figure~\ref{fig:memstat_all}. We
+surveys, in a manner similar to Figure~\ref{cat_fig:memstat_all}. We
 reiterate that these statistics describe the accuracy of 
 the assignment of galaxies to groups, and not the detection of groups
 themselves. The figure illustrates that purity and completeness
@@ -1715,10 +1716,10 @@ methods to ensure a reliable sample of groups before assigning members.
   membership selection for hypothetical surveys with different
   redshift uncertainties according to the legend. Each curve
   represents the mean of ten mock lightcones. The fiducial survey is the same as
-  that plotted in Figure~\ref{fig:memstat_all} for COSMOS. Note that
+  that plotted in Figure~\ref{cat_fig:memstat_all} for COSMOS. Note that
   the completeness curves for $\sigma_z=0.0004$ and $0.005$ lie atop
   one another.}
-\label{fig:memstat_surveys_zerr}
+\label{cat_fig:memstat_surveys_zerr}
 \end{figure}
 % **** FIG 7 *****
 
@@ -1728,10 +1729,10 @@ methods to ensure a reliable sample of groups before assigning members.
 \caption{Completeness (top row) and purity (bottom row) of the galaxy
   membership selection for hypothetical surveys with different
   centroid uncertainties according to the legend. As in
-  Figure~\ref{fig:memstat_surveys_zerr}, each curve represents the
+  Figure~\ref{cat_fig:memstat_surveys_zerr}, each curve represents the
   mean of ten mock lightcones, and the fiducial survey is the same as 
-  that plotted in Figure~\ref{fig:memstat_all} for COSMOS.}
-\label{fig:memstat_surveys_centroid}
+  that plotted in Figure~\ref{cat_fig:memstat_all} for COSMOS.}
+\label{cat_fig:memstat_surveys_centroid}
 \end{figure}
 % **** FIG 8 *****
 
@@ -1741,7 +1742,7 @@ methods to ensure a reliable sample of groups before assigning members.
 %--------------------------------------------------------
 
 \section{Member Catalog}
-\label{s:catalog}
+\label{cat_s:catalog}
 
 In the spirit of public releases of COSMOS data, we make our
 membership assignments available as machine-readable files through the
@@ -1753,7 +1754,7 @@ identifications. For each group we provide the X-ray position, flux,
 and luminosity, along with the redshift, halo mass, quality flags, and
 the position and stellar mass of the central galaxy MMGG$_{\rm scale}$.
 For reference, the basic parameters describing the catalog are compiled in
-Table~\ref{t:catalog_properties}. For analyses requiring a clean
+Table~\ref{cat_t:catalog_properties}. For analyses requiring a clean
 selection of galaxy groups, we restrict the sample to groups with
 \textsc{xflag}~$=1$ or 2 and the \textsc{mask}, \textsc{poor}, and
 \textsc{merger} flags blank to ensure that groups
@@ -1762,11 +1763,11 @@ define a new property, \textsc{flag\_include}, to encode this combination of
 selection cuts. When a pure and complete
 sample of members is needed, we select galaxies with $P_{\rm mem}>0.5$
 in the inner regions of groups, $R<0.5\rvir$, with stellar masses
-above our sample limit shown in Figure~\ref{fig:mass_limits}.
+above our sample limit shown in Figure~\ref{cat_fig:mass_limits}.
 
 \begin{deluxetable}{lc}
 \tabletypesize{\scriptsize}
-\tablecaption{Basic catalog properties\label{t:catalog_properties}}
+\tablecaption{Basic catalog properties\label{cat_t:catalog_properties}}
 \tablehead{\colhead{Property} & \colhead{Value}}
 \startdata
 Field coordinates (J2000) & RA=(149\fdg4, 150\fdg8), Dec=(1\fdg57, 2\fdg90) \\
@@ -1803,7 +1804,7 @@ complete.
 %--------------------------------------------------------
 
 \section{Analysis and Discussion}
-\label{s:discussion}
+\label{cat_s:discussion}
 
 With the catalog of group members identified and the purity and
 completeness of the sample characterized, we provide a first look at
@@ -1814,7 +1815,7 @@ more detail, including galaxy morphologies, star formation rates, and
 AGN activity with respect to group properties like redshift, halo
 mass, and group-centric distance.
 
-Figure~\ref{fig:group_cm} shows the unextincted rest-frame NUV-R
+Figure~\ref{cat_fig:group_cm} shows the unextincted rest-frame NUV-R
 colors from \citet{Ilbert2010} for group members. We use the clean
 sample of groups, selecting members with $P_{\rm mem}>0.5$ within
 \rvir\ of the group center. The apparent banding in colors is due to
@@ -1836,11 +1837,11 @@ and redshifts \citep[e.g.,][]{Gerke2007}.
 We also see that there exist a number of blue centrals, which are of
 interest because they suggest that star formation can persist or be
 reactivated in the centers of dense groups, or that AGN exist there. The set of red
-points in Figure~\ref{fig:group_cm} omits ambiguous cases where there
+points in Figure~\ref{cat_fig:group_cm} omits ambiguous cases where there
 is a more massive galaxy in the outskirts of a group or where the
 MMGG$_{\rm scale}$ differs between the photo-$z$-only catalog and
 the one supplemented with available spectroscopic redshifts; $79\%$ of
-groups satisfying the quality cuts of \S~\ref{s:catalog} have an
+groups satisfying the quality cuts of \S~\ref{cat_s:catalog} have an
 unambiguous central according to these criteria. While the majority of
 this sample of centrals are red (77 out of 102), there are 5 centrals
 with blue colors indicative of active star formation or AGN, and 20 centrals
@@ -1866,14 +1867,14 @@ for comparison. Axis labels should be multiplied by 15 (centrals), 150
 (satellites), and 500 (red-shift matched field sample)
 to obtain the normalized distributions. The lower end of the stellar
 mass range plotted corresponds to our completeness limit at $z=1$.}
-\label{fig:group_cm}
+\label{cat_fig:group_cm}
 \end{figure}
 % **** FIG 9 *****
  
 \subsection{Environmental Dependence from $z=0.2$ to $1$}
 
 The higher fraction of blue galaxies in the field compared to groups
-shown in Figure~\ref{fig:group_cm}
+shown in Figure~\ref{cat_fig:group_cm}
 indicates that star formation is less common in dense
 environments. As discussed in the introduction, much work has been
 carried out to determine whether this well-known effect is due to a physical
@@ -1893,12 +1894,12 @@ is important because galaxies in low density environments have a higher dust
 content, even among massive galaxies \citep{Kauffmann2004}. 
 
 The fraction of red galaxies in fixed stellar mass bins is plotted
-for three redshift ranges in Figure~\ref{fig:quenchz}. For group
+for three redshift ranges in Figure~\ref{cat_fig:quenchz}. For group
 members, we consider only galaxies with membership probability $P_{\rm
 mem}>0.5$ within a projected distance of $0.5\rvir$ of the center of
 groups in the mass completeness-limited bins of
-Figure~\ref{fig:mass_limits}. The radial cut on the group sample is to avoid contamination
-in the outskirts discussed in \S~\ref{s:error}. The plot includes both centrals and
+Figure~\ref{cat_fig:mass_limits}. The radial cut on the group sample is to avoid contamination
+in the outskirts discussed in \S~\ref{cat_s:error}. The plot includes both centrals and
 satellites; excluding centrals leaves the results essentially
 unchanged because the sample is dominated by satellites even in the
 highest stellar mass bin plotted. The fraction of red galaxies in
@@ -1918,7 +1919,7 @@ We also see evidence for an increase in the red fraction with
 decreasing redshift among low mass group galaxies. Redshift 
 trends are somewhat difficult to interpret because the
 range of group masses used is different in each redshift bin (see
-Figure~\ref{fig:mass_limits}) and the color cut does not account for
+Figure~\ref{cat_fig:mass_limits}) and the color cut does not account for
 evolution, so we leave a detailed analysis for
 future work. Because our galaxy sample is magnitude-limited,
 the low mass bins at high redshift are incomplete and plotted as open
@@ -1934,7 +1935,7 @@ so we consider the red fractions in incomplete bins to be lower limits.
   in different redshift bins (separate panels). Triangles show the
   quenched fraction of members with $P_{\rm mem}>0.5$ and
   projected group-centric distance within $0.5$\rvir\ of groups in the
-  mass bins from Figure~\ref{fig:mass_limits}. Squares show the
+  mass bins from Figure~\ref{cat_fig:mass_limits}. Squares show the
   quenched fraction of field galaxies with $P_{\rm mem}=0$. Open
   symbols show bins with stellar mass incompleteness; the arrows above
   these symbols indicate that they are likely to be biased lower than
@@ -1944,12 +1945,12 @@ so we consider the red fractions in incomplete bins to be lower limits.
   individual groups, with size proportional to the number of members
   in the bin. Note that the range of halo masses for group members
   varies between redshift bins.}
-\label{fig:quenchz}
+\label{cat_fig:quenchz}
 \end{figure}
 % **** FIG 10 *****
  
 We detect a clear dependence of galaxy color on environment, even at fixed
-stellar mass and high redshift. Figure~\ref{fig:quenchz} uses the
+stellar mass and high redshift. Figure~\ref{cat_fig:quenchz} uses the
 member catalog determined with photometric redshifts only, but
 including the available spectroscopic redshifts does not affect the
 results. Our results are similarly insensitive to the choice of a
@@ -1972,7 +1973,7 @@ distinguishing between physical processes happening before and after
 galaxies join groups is necessary to determine the role that groups
 play in this process.
 
-We now compare Figure~\ref{fig:quenchz} to results from the literature.
+We now compare Figure~\ref{cat_fig:quenchz} to results from the literature.
 Our findings are consistent with results at low-redshift that show a
 decrease in star formation at high stellar masses, as well as a clear
 connection between star-formation and environment even after
@@ -2029,7 +2030,7 @@ We now consider aspects of the analysis methods and
 definitions of environments that may contribute
 to the differing results, focusing our attention to field studies at $z\sim
 1$ where the results appear most discrepant. For instance, we have shown in
-Figure~\ref{fig:memstat_surveys_centroid} that centroiding errors can
+Figure~\ref{cat_fig:memstat_surveys_centroid} that centroiding errors can
 influence the purity and completeness of a 
 group sample, and our lensing tests (see Paper II) ensure a reliable
 determination of the center of mass. Additionally, we use only galaxies and groups in
@@ -2098,7 +2099,7 @@ scale that varies with density and is typically of order
 $1~\rm{Mpc}$. \citet{Scodeggio2009} measures a density field on a
 significantly larger scale of $8~\rm{Mpc}$, so correlations on the
 smaller scales of group halos may be washed out. The group sample in
-Figure~\ref{fig:quenchz} is restricted to $0.5\rvir$ but the
+Figure~\ref{cat_fig:quenchz} is restricted to $0.5\rvir$ but the
 environmental signal is not significantly different when all selected
 members out to \rvir\ are included, despite the higher contamination
 fraction. In either case, \rvir\ is typically about $500~\rm{kpc}$ for
@@ -2190,7 +2191,7 @@ the SZ signal in such systems.
 %--------------------------------------------------------
 
 \section{Summary and Conclusions}
-\label{s:conclusion}
+\label{cat_s:conclusion}
 
 We have presented a catalog of member galaxies in X-ray selected
 groups in the COSMOS field, carefully taking into account photo-$z$

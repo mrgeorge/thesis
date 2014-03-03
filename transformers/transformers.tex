@@ -1,89 +1,10 @@
-%-------- DOCUMENT CLASS ------------
-\documentclass[12pt]{emulateapj}
+\chapter{Galaxies in X-ray Groups. III. Satellite Color 
+and Morphology Transformations}
 
-%-------- Packages ------------
-%\usepackage[iop]{emulateapj}
-\usepackage{amsmath,amssymb,natbib,graphicx}
-\usepackage[usenames]{color}
-\usepackage[colorlinks,urlcolor=blue,citecolor=black,linkcolor=blue]{hyperref} % for yahapj biblio links
-%\pdfoutput=1                  % For the PDF latex compiler
-
-% For US letter size
-\special{papersize=8.5in,11in}
-\setlength{\pdfpageheight}{\paperheight}
-\setlength{\pdfpagewidth}{\paperwidth}
-
-
-%-------- MACROS ------------
- \newcommand{\eg}{{e.g.}}
- \newcommand{\nuvr}{{$(\rm{NUV} - r^+)$ }}
-
-%\setlength{\topmargin}{0.7in} % uncomment when compiling on macbeth
-
-%-------- TITLE COMMENT ------------
-
- %% You can insert a short comment on the title page using the command below.
-%\slugcomment{ }
- 
-%-------- SHORT TITLE  ---------------------
- 
-\shorttitle{Transformers}
-\shortauthors{George et al.}
- 
-%-------- BEGIN DOC  ---------------------
- 
- \begin{document}
-  
-%-------- TITLE  ---------------------
-
- \title{Galaxies in X-ray Groups. III. Satellite Color and Morphology Transformations}
-
-%-------- AUTHORS  ---------------------
-
- %% Use \author, \affil, and the \and command to format
- %% author and affiliation information.
- %% Note that \email has replaced the old \authoremail command
- %% from AASTeX v4.0. You can use \email to mark an email address
- %% anywhere in the paper, not just in the front matter.
- %% As in the title, use \\ to force line breaks.
-
-\author{
-Matthew R. George\altaffilmark{1,2},
-Chung-Pei Ma\altaffilmark{1},
-Kevin Bundy\altaffilmark{3}, 
-Alexie Leauthaud\altaffilmark{3}, 
-Jeremy Tinker\altaffilmark{4},
-Risa H. Wechsler\altaffilmark{5,6},
-Alexis Finoguenov\altaffilmark{7},
-Benedetta Vulcani\altaffilmark{3}
-}
-
-\altaffiltext{1}{Department of Astronomy, University of California,
-  Berkeley, CA 94720, USA}
-\altaffiltext{2}{Lawrence Berkeley National Laboratory, 1 Cyclotron
-  Road, Berkeley, CA 94720, USA}
-\altaffiltext{3}{Kavli Institute for the Physics and Mathematics of
-  the Universe (Kavli IPMU, WPI), Todai Institutes for Advanced Study,
-University of Tokyo, Kashiwa 277-8583, Japan}
-\altaffiltext{4}{Center for Cosmology and Particle Physics, Department
-of Physics, New York University, 4 Washington Place, New York, NY
-10003, USA}
-\altaffiltext{5}{Kavli Institute for Particle Astrophysics and
-  Cosmology, SLAC National Accelerator Laboratory, 2575 Sand Hill
-  Rd., Menlo Park, CA 94025, USA}
-\altaffiltext{6}{Physics Department, Stanford University, Stanford, CA
-94305, USA}
-\altaffiltext{7}{Department of Physics, University of Helsinki, Gustaf
-H\"{a}llstr\"{o}min katu 2a, FI-00014 Helsinki, Finland}
-
-
-\email{mgeorge@astro.berkeley.edu}
-
-%\submitted{Submitted to ApJ}
+\label{chap:transformers}
 
 %-------- ABSTRACT  ---------------------
   
-\begin{abstract}
   While the star formation rates and morphologies of galaxies have
   long been known to correlate with their local environment, the
   process by which these correlations are generated is not well
@@ -115,14 +36,7 @@ H\"{a}llstr\"{o}min katu 2a, FI-00014 Helsinki, Finland}
   encounters must play a role in building up the population of
   quenched galaxies with bulges seen in dense environments at low
   redshift.
-\end{abstract}
  
-%-------- KEY WORDS  ---------------------
-
-\keywords{galaxies: bulges -- galaxies: clusters: general -- galaxies:
-  evolution -- galaxies: halos -- galaxies: statistics -- X-rays:
-  galaxies: clusters}
-
 %--------------------------------------------------------------
 % INTRODUCTION
 %--------------------------------------------------------------
@@ -196,19 +110,19 @@ confirmed the halo mass estimates. These ingredients make for a robust
 characterization of group environments with which to study satellite
 properties and their evolution over time.
 
-We describe the data used in this analysis in Section~\ref{s:data}
+We describe the data used in this analysis in Section~\ref{tran_s:data}
 along with mock catalogs used to estimate the purity of the satellite
-population analyzed. Section~\ref{s:results} presents the results
+population analyzed. Section~\ref{tran_s:results} presents the results
 including our primary finding of a declining fraction of blue late
 disk galaxies and a rise in red early types toward group centers and
-over cosmic time. In Section~\ref{s:discussion}, we discuss the
+over cosmic time. In Section~\ref{tran_s:discussion}, we discuss the
 implications of these findings for the physical mechanisms that shape
 galaxy evolution, and put this work in the context of previous studies
 and possibilities for the future.
 
 
 \section{Data and Mocks}
-\label{s:data}
+\label{tran_s:data}
 
 The COSMOS field \citep{Scoville2007a} has been the subject of a broad
 array of multi-wavelength imaging and spectroscopy campaigns. In this
@@ -232,7 +146,7 @@ for validating group membership assignment and estimating the effects
 of contamination from field galaxies.
 
 \subsection{Group Membership and Mocks}
-\label{s:groupdata}
+\label{tran_s:groupdata}
 
 As a measure of galaxy environment, we use a catalog of groups
 described in \citet{George2011}. These groups have been identified
@@ -279,7 +193,7 @@ occupied by the field population can evolve due to this selection
 effect. However, at low redshift only $\sim10\%$ of galaxies in our
 sample live in X-ray groups, so we expect the evolving halo mass limit to have
 only a small effect on the statistics of the field
-population. Table~\ref{tab:census} gives the size of each of these
+population. Table~\ref{tran_tab:census} gives the size of each of these
 samples used in our analysis.
 
 \begin{deluxetable}{crr}
@@ -289,19 +203,21 @@ samples used in our analysis.
 \startdata
 % written by printCensusTable in plot_colormorph.py
 % remove incomplete sections by hand
-\sidehead{$z=0.2-0.5; N_{\rm groups}=47$}
+$z=0.2-0.5; N_{\rm groups}=47$ \\
 Satellites & 237 & 218 \\ 
 Field & 2455 & 1993 \\ 
-\sidehead{$z=0.5-0.8; N_{\rm groups}=40$}
+\\
+$z=0.5-0.8; N_{\rm groups}=40$ \\
 Satellites & 122 & 189 \\ 
 Field & 4497 & 3529 \\ 
-\sidehead{$z=0.8-1.0; N_{\rm groups}=29$}
+\\
+$z=0.8-1.0; N_{\rm groups}=29$ \\
 Satellites & ... & 157 \\ 
 Field & ... & 4170
 \enddata
 \tablecomments{No contamination corrections have been
   applied. Ellipses denote a bin below our stellar mass
-  completeness limit. \label{tab:census}}
+  completeness limit. \label{tran_tab:census}}
 \end{deluxetable}
 
 Extensive tests of the accuracy of the photometric redshifts and
@@ -348,7 +264,7 @@ redshifts is effectively achromatic \citep[see Figures 2 and 5 of][]{George2011}
 
 
 \subsection{Stellar Masses, Colors, and Morphologies}
-\label{s:otherdata}
+\label{tran_s:otherdata}
 
 Stellar masses and spectral classes have been determined by fitting
 stellar population synthesis models to the spectral energy
@@ -407,12 +323,11 @@ optical wavelengths over our entire redshift range
 
 
 \section{Results}
-\label{s:results}
+\label{tran_s:results}
 
 % **** FIG *****
 \begin{figure*}[htb]
-\epsscale{1.2}
-\plotone{fig1}
+\plotone{transformers/fig1.pdf}
 \caption{Group members as a function of stellar mass and distance from
   the group center. Colors for each galaxy represent the average
   unextincted rest-frame template \nuvr color, with shading
@@ -427,12 +342,12 @@ optical wavelengths over our entire redshift range
   of galaxies chosen to span the range of colors observed; objects in
   this panel are sorted vertically by color and horizontal offsets
   within each classification are arbitrary.}
-\label{fig:candy}
+\label{tran_fig:candy}
 \end{figure*}
 % **** FIG *****
  
 We begin our analysis with a visualization of a few properties of the
-galaxies in our sample. Figure~\ref{fig:candy} shows the distributions
+galaxies in our sample. Figure~\ref{tran_fig:candy} shows the distributions
 of stellar masses and group-centric distances in different redshift
 bins for all galaxies selected as group members. Each point represents
 one object and is displayed using the ACS image of the galaxy \citep{Koekemoer2007}, colored
@@ -476,7 +391,7 @@ trends as the number densities vary significantly due to large-scale
 structures (particularly evident at $z=0.3-0.4$), but the relative
 fractions of different populations should be less affected.
 
-The central panel of Figure~\ref{fig:candy} shows a few examples of
+The central panel of Figure~\ref{tran_fig:candy} shows a few examples of
 the three morphological classifications from ZEST, chosen randomly to
 span the range of colors seen from redshifts $z=0.4-0.6$ and with
 $\log(M_{\star}/M_{\odot})>10$. While these classifications do not
@@ -487,17 +402,17 @@ interesting test of the dependence of morphology on environment. We
 emphasize that the ZEST morphologies are correlated with, but not
 identical to, traditional visual classification of ellipticals and
 spirals. We compare results from multiple morphological indicators in
-Section~\ref{s:systematics}.
+Section~\ref{tran_s:systematics}.
 
 \subsection{Radial Trends: Blue Late Disks into Red Bulge+disks}
-\label{s:rtrends}
+\label{tran_s:rtrends}
 
-We can quantify some of the trends from Figure~\ref{fig:candy} by
+We can quantify some of the trends from Figure~\ref{tran_fig:candy} by
 measuring the fraction of galaxies of a given color and morphology as
 a function of stellar mass, group-centric distance, and
-redshift. Figure~\ref{fig:satrad_single} shows the fraction of
+redshift. Figure~\ref{tran_fig:satrad_single} shows the fraction of
 galaxies in each of the six combinations of color and morphology
-categories described in Section~\ref{s:otherdata}. For example, the
+categories described in Section~\ref{tran_s:otherdata}. For example, the
 cyan triangles represent the fraction of galaxies in the stellar mass
 and redshift range shown that are both blue and have late disk
 morphology. This population makes up the majority among field galaxies
@@ -509,8 +424,7 @@ the inner radial bin.
 
 % **** FIG *****
 \begin{figure}[htb]
-\epsscale{1.2}
-\plotone{fig2}
+\plotone{transformers/fig2.pdf}
 \caption{Color and morphological fractions as a function of
   group-centric distance. These fractions are calculated for
   satellites in three equally-spaced bins out to $R_{\rm 200c}$ after
@@ -520,13 +434,13 @@ the inner radial bin.
   bootstrap samples. There is a clear transition from blue late disks
   dominating among field galaxies and outer satellites to red
   bulge+disks among inner satellites.}
-\label{fig:satrad_single}
+\label{tran_fig:satrad_single}
 \end{figure}
 % **** FIG *****
 
-Figure~\ref{fig:satrad_single} highlights the most significant
+Figure~\ref{tran_fig:satrad_single} highlights the most significant
 environmental trends in our sample by focusing on low mass, low
-redshift galaxies. We repeat the exercise in Figure~\ref{fig:satrad}
+redshift galaxies. We repeat the exercise in Figure~\ref{tran_fig:satrad}
 with higher mass and redshift bins to study how these trends vary. The
 broad picture is similar; blue late disks dominate in the field while
 the red bulge+disk population becomes more prominent toward group
@@ -545,27 +459,26 @@ in spherical shells are likely more significant than observed.
 
 % **** FIG *****
 \begin{figure}[htb]
-\epsscale{1.25}
-\plotone{fig3}
+\plotone{transformers/fig3.pdf}
 \caption{Color and morphological fractions of group members as a
   function of distance from the group center, for different bins of
   stellar mass (columns) and redshift (rows). Line styles and error
   bars are as defined in
-  Figure~\ref{fig:satrad_single}. Figure~\ref{fig:satrad_single} is
+  Figure~\ref{tran_fig:satrad_single}. Figure~\ref{tran_fig:satrad_single} is
   repeated in the top left panel, for comparison with weakening
   environmental trends at higher mass and redshift.}
-\label{fig:satrad}
+\label{tran_fig:satrad}
 \end{figure}
 % **** FIG *****
 
 \subsection{Redshift Trends}
-\label{s:ztrends}
+\label{tran_s:ztrends}
 
 Since satellites tend to fall toward halo centers, group-centric
 distance is related to the timescale that galaxies have been inside
 the group. The range of redshifts sampled with this data set provides
-another measure of time to study evolution. Figure~\ref{fig:satz} is a
-transpose of Figure~\ref{fig:satrad} to show the redshift trends in
+another measure of time to study evolution. Figure~\ref{tran_fig:satz} is a
+transpose of Figure~\ref{tran_fig:satrad} to show the redshift trends in
 the distribution of colors and morphologies. Again, there is a decline
 in blue late disks among low-mass satellites near the centers of
 groups, now compensated by a rise in both red spheroidals and red
@@ -574,29 +487,27 @@ higher masses.
 
 % **** FIG *****
 \begin{figure}[htb]
-\epsscale{1.2}
-\plotone{fig4}
+\plotone{transformers/fig4.pdf}
 \caption{Color and morphological fractions as a function of redshift,
   for different bins of stellar mass (columns) and environment
   (rows). Inner and outer satellites are separated at a projected
   group-centric distance of $0.5 R_{\rm 200c}$. Line styles and error
-  bars are as defined in Figure~\ref{fig:satrad_single}.}
-\label{fig:satz}
+  bars are as defined in Figure~\ref{tran_fig:satrad_single}.}
+\label{tran_fig:satz}
 \end{figure}
 % **** FIG *****
 
 \subsection{Checks for Systematics}
-\label{s:systematics}
+\label{tran_s:systematics}
 
 % **** FIG *****
 \begin{figure}[htb]
-\epsscale{1.25}
-\plotone{fig5}
+\plotone{transformers/fig5.pdf}
 \caption{Distribution of rest-frame, extinction-corrected, template
   colors by morphological type. Galaxies from all environments are
   included. Vertical dotted lines show the cut used to segregate red
   and blue galaxies.}
-\label{fig:color_hist}
+\label{tran_fig:color_hist}
 \end{figure}
 % **** FIG *****
  
@@ -605,8 +516,8 @@ higher masses.
 There are several possible biases or other effects in the data to
 consider in order to ensure the robustness of these results. First, we
 revisit the contamination of our satellite sample due to interloping
-field galaxies, discussed in Section~\ref{s:groupdata}. In
-Figures~\ref{fig:satrad_single},~\ref{fig:satrad}, and~\ref{fig:satz} we
+field galaxies, discussed in Section~\ref{tran_s:groupdata}. In
+Figures~\ref{tran_fig:satrad_single},~\ref{tran_fig:satrad}, and~\ref{tran_fig:satz} we
 have plotted values of population fractions for satellites corrected for contamination estimated
 from mock catalogs. Contamination corrections are always smaller
 than the statistical error bars estimated via bootstrapping, except
@@ -627,11 +538,11 @@ including an estimate of dust extinction that separates star-forming
 galaxies that appear red due to dust from those that are truly
 passive. The template-based, extinction-corrected \nuvr colors used in
 this paper generally have a bimodal distribution with the color cut
-from Section~\ref{s:otherdata} falling on the red end of the ``green
+from Section~\ref{tran_s:otherdata} falling on the red end of the ``green
 valley.'' The color distributions for different morphological types
-are shown in Figure~\ref{fig:color_hist}. Shifting the cut slightly in
+are shown in Figure~\ref{tran_fig:color_hist}. Shifting the cut slightly in
 either direction shifts the amplitude of the red fraction in
-Figures~\ref{fig:satrad_single},~\ref{fig:satrad}, and~\ref{fig:satz}
+Figures~\ref{tran_fig:satrad_single},~\ref{tran_fig:satrad}, and~\ref{tran_fig:satz}
 up or down, but the trends with group-centric distance and redshift do
 not vary significantly. We have tested an alternative ``red sequence''
 selection suggested by \citet{Ilbert2010}, ${\rm NUV - r^+} >
@@ -643,7 +554,7 @@ still evident. Similarly, applying the two-color cut in the ${\rm NUV
 qualitatively change our results.
 
 \subsubsection{Morphologies}
-\label{s:sys_morph}
+\label{tran_s:sys_morph}
 
 Morphological classification is a challenging problem and significant
 scatter exists between the types assigned to galaxies in both visual
@@ -663,18 +574,18 @@ The differences between the results of each catalog and those from the
 ZEST classification used in this paper are driven by how bulge+disk
 galaxies are classified, since the other catalogs do not split the
 spiral/disk category into multiple bins as ZEST does. For instance,
-among the $237$ satellites used for Figure~\ref{fig:satrad_single},
+among the $237$ satellites used for Figure~\ref{tran_fig:satrad_single},
 the ZEST classifications are $22\%$ spheroidal, $36\%$ bulge+disk,
 $37\%$ late disk, and $5\%$ irregular or unclassified. The three separate
 classifications for these galaxies from \citet{Tasca2009} vary between
 $39 - 59\%$ E/S0s and $59 - 40\%$ spirals.
 When bulge+disk galaxies are mostly classified as E/S0s, the
-spheroidal populations (both blue and red) in Figures~\ref{fig:satrad}
-and~\ref{fig:satz} are significantly elevated but show similar trends
+spheroidal populations (both blue and red) in Figures~\ref{tran_fig:satrad}
+and~\ref{tran_fig:satz} are significantly elevated but show similar trends
 with group-centric distance and redshift. In the opposite case where
 bulge+disk galaxies are mostly treated as disks, the spheroidal
 fraction is essentially unchanged. While the dominant population in
-each panel of Figure~\ref{fig:satrad} and~\ref{fig:satz} can change
+each panel of Figure~\ref{tran_fig:satrad} and~\ref{tran_fig:satz} can change
 depending on which category the intermediate bulge+disk galaxies fall
 into, the radial trend in low mass satellites is unchanged; the blue
 late type fraction declines toward group centers and is compensated
@@ -692,8 +603,8 @@ identified a population in transition.
 While the tests described above suggest that our measures of
 environment, color, and morphology are robust, we do note a puzzling
 population of massive blue spheroidals that can be seen most clearly
-in the bottom right panel of Figure~\ref{fig:satz} as well as the
-right column of Figure~\ref{fig:color_hist}. Those plots suggests
+in the bottom right panel of Figure~\ref{tran_fig:satz} as well as the
+right column of Figure~\ref{tran_fig:color_hist}. Those plots suggests
 that half of all spheroidals in that stellar mass range are blue,
 exceeding measurements in other studies \citep[e.g.][]{Kaviraj2007,
   Kaviraj2008, Bamford2009, Schawinksi2009, Ilbert2010}, but see also
@@ -722,7 +633,7 @@ not show a strong dependence on environment, so we do not consider it
 further here.
 
 \section{Discussion and Conclusions}
-\label{s:discussion}
+\label{tran_s:discussion}
 
 Our results indicate a complex relationship between color, morphology,
 stellar mass, and group-centric distance. Trends in color and
@@ -762,7 +673,7 @@ Moving from large low-redshift studies to moderate redshifts ($z\sim0.4$), \cite
 galaxies than the field, while \citet{Wilman2009} found
 an elevated S0 fraction in groups with a mildly significant rise with
 group-centric distance. This radial trend in morphology is the opposite of that seen
-in Figure~\ref{fig:satrad} but may be due to a smaller sample size or
+in Figure~\ref{tran_fig:satrad} but may be due to a smaller sample size or
 the use of luminosity-weighted centroids, which have been shown to be
 a poorer tracer of halo centers measured by weak lensing when compared
 with the most massive galaxy used in this catalog \citep{George2012}.
@@ -782,9 +693,6 @@ and \citet{Presotto2012} have also shown that the quenched fraction
 among satellites depends significantly on group-centric distance at
 these redshifts.
 
-% note: Woo doesn't actually treat satellites at all in AEGIS, only
-% SDSS which shows radial gradients
-
 The results presented here extend this work to include radial trends
 in colors and morphologies from $z=0.2-1$. Our X-ray group catalog
 gives a large, clean, and fairly representative selection of
@@ -794,7 +702,7 @@ its weak lensing signal \citep{Leauthaud2010, George2012}. We detect significant
 trends in both color and morphology with group-centric distance. Some previous studies measured weak or insignificant
 gradients in morphology by using a simple dichotomy of spirals and
 ellipticals, and we can reproduce these results when using a coarse
-morphological binning (see discussion in Section~\ref{s:sys_morph}). But in contrast
+morphological binning (see discussion in Section~\ref{tran_s:sys_morph}). But in contrast
 to those results, we see clear morphological gradients at
 fixed stellar mass and color once the morphological classification
 considers differences in the bulge content of disk galaxies.
@@ -812,18 +720,14 @@ redshift. There is a significant overlap between the intermediate
 bulge+disk population in our analysis and visually classified S0
 galaxies although these bulge+disk galaxies are often classified
 slightly later along the Hubble sequence \citep{Scarlata2007}. Our
-results in Figure~\ref{fig:satz} broadly corroborate those of
+results in Figure~\ref{tran_fig:satz} broadly corroborate those of
 \citet{Smith2005a} and add that color and stellar mass are also
 important dimensions when studying these trends.
-
-% leave out wetzel and tinker here, discuss in modeling mechanisms -
-% "delayed then quenched" model, may fit with what McGee and Balogh
-% group suggest
 
 \subsection{Implications for Physical Mechanisms of Galaxy Transformation}
 
 The radial gradients and redshift trends measured in
-Section~\ref{s:results} suggest a transformation among low mass
+Section~\ref{tran_s:results} suggest a transformation among low mass
 satellites from blue late disks into red bulge+disks and spheroidals.
 The mechanism for this transformation must affect both color and
 morphology, or more physically, the star formation rate and stellar
@@ -853,12 +757,12 @@ environments have more bulge-dominated morphologies than quenched
 field galaxies, it would suggest that mergers or strong tidal
 interactions altering the structure of galaxies occur in addition to,
 or in conjunction with, the suppression of star formation. The results
-of this test are plotted in Figure~\ref{fig:satradred}, where we show
+of this test are plotted in Figure~\ref{tran_fig:satradred}, where we show
 the fractions of red galaxies that are early and late type as a
 function of environment. We have used a broad redshift range and
 combined the spheroidal and bulge+disk categories to reduce
 statistical errors for this smaller population of red
-galaxies. Figure~\ref{fig:satradred} demonstrates that quenched
+galaxies. Figure~\ref{tran_fig:satradred} demonstrates that quenched
 satellites, particularly those in the inner regions of groups, are
 more likely to be bulge-dominated than their field
 counterparts. 
@@ -876,36 +780,34 @@ that accompanies quenching in groups.
 
 % **** FIG *****
 \begin{figure}[htb]
-\epsscale{1.2}
-\plotone{fig6}
+\plotone{transformers/fig6.pdf}
 \caption{Morphological fractions \textit{among red galaxies} as a
   function of distance from the group center. The small but
   significant excess in early-type morphologies among inner satellites
   relative to field galaxies suggests that mergers or tidal
   interactions cause more significant bulge growth among
   satellites.}
-\label{fig:satradred}
+\label{tran_fig:satradred}
 \end{figure}
 % **** FIG *****
 
 % **** FIG *****
 \begin{figure*}[htb]
-\epsscale{1.1}
-\plottwo{fig7a}{fig7b}
+\plottwo{transformers/fig7a.pdf}{transformers/fig7b.pdf}
 \caption{Illustrations of our main results and interpretation. Left
   panel shows the projected positions of satellites in an ensemble
   group with the same stellar mass and redshift range as
-  Figure~\ref{fig:satrad_single} with only the blue late disks (which
+  Figure~\ref{tran_fig:satrad_single} with only the blue late disks (which
   dominate the outskirts) and red bulge+disks (which dominate the
   interior) displayed. The schematic diagram at right shows the effects of various
   physical mechanisms on color and morphology; the large arrow
   indicates the observed transformation from blue late disks to red
   bulge+disks, suggesting a combination of processes.}
-\label{fig:cartoons}
+\label{tran_fig:cartoons}
 \end{figure*}
 % **** FIG *****
 
-The results of Figure~\ref{fig:satrad} suggest that the timescale for
+The results of Figure~\ref{tran_fig:satrad} suggest that the timescale for
 the morphological transition from late disk to bulge+disk must be
 comparable to the timescale for quenching in order to turn blue late
 disks directly into red bulge+disk galaxies. For example, if quenching
@@ -915,7 +817,7 @@ into red late disks. Instead we observe a growth in red galaxies with
 earlier morphologies whenever blue late disks decline.  The fraction
 of blue late disks plummets by more than a factor of two in
 $\sim2~{\rm Gyr}$ among inner satellites (top left panel of
-Figure~\ref{fig:satz}), while the fraction of red late disks is nearly
+Figure~\ref{tran_fig:satz}), while the fraction of red late disks is nearly
 constant and the fraction of red bulge+disks grows. Similarly, we do
 not detect a large population of blue bulge+disk galaxies which might
 be expected if bulge growth happened faster than quenching. These
@@ -929,8 +831,8 @@ ZEST classification.  This echoes earlier results finding a buildup of
 S0s in clusters but weaker evolution in the relative abundance of
 ellipticals \citep[e.g.,][]{Dressler1997}. Though the fraction of red
 spheroidals does not correlate significantly with group-centric
-distance (Figure~\ref{fig:satrad}), it does grow globally with time
-(Figure~\ref{fig:satz}). This may indicate that different processes
+distance (Figure~\ref{tran_fig:satrad}), it does grow globally with time
+(Figure~\ref{tran_fig:satz}). This may indicate that different processes
 are responsible for producing bulge+disks and spheroidals. 
 
 The discreteness of morphological classification makes detailed
@@ -944,7 +846,7 @@ intermediate state between blue late disk and red bulge+disk by
 measuring the time since quenching based on the SEDs of galaxies in
 these intermediate states. Is there a difference in the mean color of
 blue bulge+disks and blue late disks, or between red bulge+disks and
-red late disks? Figure~\ref{fig:color_hist} does not show conclusive
+red late disks? Figure~\ref{tran_fig:color_hist} does not show conclusive
 differences in the colors of these populations, and the satellite
 sample size is too small to constrain differences in the distribution
 of colors within the red and blue populations. More detailed analysis
@@ -970,9 +872,9 @@ growing S0 population seen at low redshift and in massive clusters,
 but likely precedes it.
  
 We summarize our main results and interpretation in
-  Figure~\ref{fig:cartoons}. The left panel shows the positions of
+  Figure~\ref{tran_fig:cartoons}. The left panel shows the positions of
   satellites for a stacked group and highlights the trend in
-  Figure~\ref{fig:satrad_single} with blue late disks dominating the
+  Figure~\ref{tran_fig:satrad_single} with blue late disks dominating the
   outskirts and red bulge+disk galaxies making up most of the inner
   satellite population. This combination of color and morphology
   transformations suggests some combination of gas removal and bulge
@@ -981,16 +883,6 @@ We summarize our main results and interpretation in
   point is that \textit{both} color and morphology are affected in
   group satellites, so physical mechanisms that explain environmental
   correlations should reflect this.
-
-%Satellite mergers in groups are feasible given the relative velocities
-%and interaction times.
-
-%radial migration timescales a la wetzel?
-
-%Feldmann simulations?
-%McCarthy 2008 on ram pressure stripping model
-%Hopkins 2010 mergers with semi-empirical models
-%Martig 2009 - morphological quenching model?
 
 \subsection{Future Prospects}
 
@@ -1044,35 +936,3 @@ fraction of quenched galaxies as a function of stellar mass and
 environment. Incorporating morphologies into this framework will
 further illuminate the physical processes at work that build up the
 environmental correlations we observe.
-
- %-------------- ACKNOWLEDGMENTS --------------------
-
-\acknowledgments 
-
-We thank Andrew Wetzel, Frank van den Bosch, and Nic Ross for helpful
-discussions, and Claire Lackner for constructive comments on a draft.
-MRG acknowledges support from the US Department of Energy's Office of
-High Energy Physics (DE-AC02-05CH11231) and a Graduate Research
-Fellowship from the US National Science Foundation. CPM is partially supported by a grant from
-the Simons Foundation (\#224959). This work was also
-supported by World Premier International Research Center Initiative
-(WPI Initiative), MEXT, Japan. We gratefully acknowledge the
-contributions of the entire COSMOS collaboration. More information on
-the COSMOS survey is available at \url{http://cosmos.astro.caltech.edu}.  This research has made use
-of the NASA/IPAC Infrared Science Archive, which is operated by the
-Jet Propulsion Laboratory, California Institute of Technology, under
-contract with the National Aeronautics and Space Administration.
-
-\mbox{~} % needed to prevent chopping off the last line above
-%-------------- BIBLIO --------------------------------
-
-%\pagebreak
-
-%\bibliographystyle{yahapj}
-\bibliographystyle{apj}
-
-\bibliography{transformers}
-
- %----------------------------------------------------
-
-\end{document}
