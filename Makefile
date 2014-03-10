@@ -1,5 +1,3 @@
-# This work is dedicated to the public domain.
-
 texargs = -interaction nonstopmode -halt-on-error -file-line-error
 
 default: mthesis.pdf # default target if you just type "make"
@@ -9,12 +7,8 @@ default: mthesis.pdf # default target if you just type "make"
 # included to show how you can process data as you compile your thesis
 # using standard GNU make constructs.
 
-deps += intro/intro.tex intro/processed.tex
-cleans += intro/intro.aux intro/processed.tex
-
-intro/processed.tex: intro/sample.tex
-	sed -e s/terrible/wonderful/ $< >$@
-
+deps += intro/intro.tex
+cleans += intro/intro.aux
 
 # Chapter 2
 
