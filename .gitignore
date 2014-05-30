@@ -12,3 +12,5 @@
 /chatter.txt
 /intro/processed.tex
 ._mthesis.pdf
+/forms/
+.DS_Store
