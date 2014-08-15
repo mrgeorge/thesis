@@ -35,13 +35,17 @@ deps += transformers/transformers.tex transformers/fig1.pdf \
   transformers/fig7b.pdf
 cleans += transformers/transformers.aux
 
-# Chapter 5 - Peculiar Velocities
-deps += flow/flow.tex
-cleans += flow/flow.aux
+# Chapter 5 - Outlook
+deps += outlook/outlook.tex
+cleans += outlook/outlook.aux
 
-# Chapter 6 - Spectroscopic Lensing
-deps += speclens/speclens.tex
-cleans += speclens/speclens.aux
+## Chapter 5 - Peculiar Velocities
+#deps += flow/flow.tex
+#cleans += flow/flow.aux
+#
+## Chapter 6 - Spectroscopic Lensing
+#deps += speclens/speclens.tex
+#cleans += speclens/speclens.aux
 
 
 # The thesis itself. We move the PDF to a new filename so that viewers
