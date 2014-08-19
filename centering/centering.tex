@@ -629,6 +629,8 @@ of offsets between the candidate and true halo center, and the
 for excess mass in the form of a subhalo around the candidate center.
 
 \begin{deluxetable}{llcccccc}
+\tabletypesize{\scriptsize}
+\tablewidth{0pt}
 \tablecaption{Model Parameters for $\Delta\Sigma(R)$}
 \tablehead{\colhead{Parameter} & \colhead{Description} & \colhead{Centered}
   & \colhead{Offset} & \colhead{Full} & \colhead{Prior mean} &
@@ -636,8 +638,8 @@ for excess mass in the form of a subhalo around the candidate center.
 }
 \startdata
 $\log(M_{\rm 200c}/M_{\odot})$ & halo mass & free & free & free & $13.5$ & $0.8$ & - \\
-$c_{\rm 200c}$ & halo concentration & tied & tied & free & $4.0$ & $3.0$ & $1<c_{\rm 200c}<10$ \\
-$\sigma_{\rm off}~(\rm{kpc})$ & offset distance scale & fixed & free & free & $0$ & $200$ & $\sigma_{\rm off}>0$ \\
+$c_{\rm 200c}$ & halo conc. & tied & tied & free & $4.0$ & $3.0$ & $1<c_{\rm 200c}<10$ \\
+$\sigma_{\rm off}~(\rm{kpc})$ & offset dist. scale & fixed & free & free & $0$ & $200$ & $\sigma_{\rm off}>0$ \\
 $\log(M_{\rm gal}/M_{\odot})$ & stellar mass  & fixed & fixed & fixed & $\langle\log(M_{\rm \star, gal}/M_{\odot})\rangle$ & - & - \\
 $\log(M_{\rm sub}/M_{\odot})$ & subhalo mass & omitted & omitted & free & $\langle\log(M_{\rm \star, gal}/M_{\odot})\rangle$ & $1.0$ & $\log(M_{\rm sub}/M_{\odot})>10$
 \enddata
@@ -866,31 +868,34 @@ Table~\ref{cen_tab:fitPars}. The $\chi^2$ values have not
 % **** FIG *****
 
 \begin{deluxetable}{lccccccccc}
+\tabletypesize{\scriptsize}
+\tablewidth{0pt}
+\tablecolumns{10}
 \tablecaption{Parameters Constraints for $\Delta\Sigma(R)$}
 \tablehead{ \colhead{} & \colhead{} & \multicolumn{3}{c}{Centered
     Model} & \colhead{} & \multicolumn{4}{c}{Offset Model} \\
   \cline{3-5} \cline{7-10} \\
-  \colhead{Candidate} & \colhead{$\langle\log(M_{\rm \star, gal}/M_{\odot})\rangle$} &
-  \colhead{$\log(M_{\rm 200c}/M_{\odot})$} & \colhead{$c_{\rm 200c}$}  & \colhead{$\chi^2$ $(\nu=5)$} & &
-  \colhead{$\log(M_{\rm 200c}/M_{\odot})$} & \colhead{$c_{\rm 200c}$}  & \colhead{$\sigma_{\rm off}$ (kpc)} & \colhead{$\chi^2$ $(\nu=4)$}
+  \colhead{Candidate} & \colhead{$\langle\log(M_{\rm \star}/M_{\odot})\rangle$} &
+  \colhead{$\log(M_{\rm 200c}/M_{\odot})$} & \colhead{$c_{\rm 200c}$}  & \colhead{$\chi^2$} & &
+  \colhead{$\log(M_{\rm 200c}/M_{\odot})$} & \colhead{$c_{\rm 200c}$}  & \colhead{$\sigma_{\rm off}$ (kpc)} & \colhead{$\chi^2$}
 }
 \startdata
-\textit{Galaxy candidates} \\
+\cutinhead{Galaxy candidates}
   MMGG$_{\rm scale}$ & 11.3 & 13.43 $\pm$  0.07 &  4.0 &  4.2 & &  13.45 $\pm$  0.07 &  3.9 &  18.2 $\pm$  11.3 &  4.2 \\
     MMGG$_{\rm R200}$ & 11.4 & 13.43 $\pm$  0.06 &  4.0 &  5.3 & &  13.47 $\pm$  0.07 &  3.9 &  28.3 $\pm$  15.2 &  4.4 \\
     BGG$_{\rm scale}$ & 11.2 & 13.40 $\pm$  0.06 &  4.0 &  2.9 & &  13.43 $\pm$  0.07 &  4.0 &  16.8 $\pm$  10.0 &  2.8 \\
      BGG$_{\rm R200}$ & 11.3 & 13.42 $\pm$  0.07 &  4.0 &  4.4 & &  13.45 $\pm$  0.06 &  3.9 &  24.8 $\pm$  12.0 &  3.0 \\
-\\
-\textit{Centroid candidates} \\
+\cutinhead{Centroid candidates}
              CN &    - & 13.35 $\pm$  0.07 &  4.0 & 21.0 & &  13.51 $\pm$  0.07 &  3.9 &  65.0 $\pm$  18.0 &  2.8 \\
              CM &    - & 13.39 $\pm$  0.07 &  4.0 & 10.5 & &  13.45 $\pm$  0.08 &  3.9 &  34.5 $\pm$  21.6 &  9.3 \\
              CF &    - & 13.38 $\pm$  0.07 &  4.0 & 14.0 & &  13.51 $\pm$  0.09 &  3.9 &  66.9 $\pm$  29.9 &  9.5 \\
           X-ray &    - & 13.30 $\pm$  0.08 &  4.1 & 15.2 & &  13.42 $\pm$  0.08 &  4.0 &  57.1 $\pm$  16.9 &  3.5
 \enddata
-\tablecomments{For both models, $M_{\rm \star, gal}$ is fixed to the
+\tablecomments{For both models, $M_{\rm \star}$ is fixed to the
   stellar mass of the central galaxy (for galaxy candidates) and zero
   otherwise, and the halo concentration is fixed by the relation of
-  \citet{Zhao2009}. \label{cen_tab:fitPars}}
+  \citet{Zhao2009}. The number of degrees of freedom, $\nu$, is 5 for
+  the centered model and 4 for the offset model.\label{cen_tab:fitPars}}
 \end{deluxetable}
 
 There are clear differences among the lensing signals for the eight
